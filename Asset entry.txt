@@ -1,0 +1,35 @@
+class AssetEntry:
+    def __init__(self, asset_id, asset_name, asset_type, asset_location, asset_condition, purchase_date, purchase_price, depreciation_rate):
+        self.asset_id = asset_id
+        self.asset_name = asset_name
+        self.asset_type = asset_type
+        self.asset_location = asset_location
+        self.asset_condition = asset_condition
+        self.purchase_date = purchase_date
+        self.purchase_price = purchase_price
+        self.depreciation_rate = depreciation_rate
+        self.current_value = self.purchase_price
+
+    def update_asset(self, attribute, new_value):
+        # Update the specified attribute of the asset with the new value
+        if attribute == 'asset_id':
+            self.asset_id = new_value
+        elif attribute == 'asset_name':
+            self.asset_name = new_value
+        elif attribute == 'asset_type':
+            self.asset_type = new_value
+        elif attribute == 'asset_location':
+            self.asset_location = new_value
+        elif attribute == 'asset_condition':
+            self.asset_condition = new_value
+        elif attribute == 'purchase_date':
+            self.purchase_date = new_value
+        elif attribute == 'purchase_price':
+            self.purchase_price = new_value
+            self.current_value = self.purchase_price
+        elif attribute == 'depreciation_rate':
+            self.depreciation_rate = new_value
+        else:
+            print("Invalid attribute specified.")
+
+   
